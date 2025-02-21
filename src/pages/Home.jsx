@@ -38,7 +38,7 @@ function Home() {
         </div>
         {isZoomed && (
           <div className="zoom-overlay" onClick={toggleZoom}>
-            <img src="/src/assets/pic.jpg" alt="Profile Zoomed" className="zoomed-image" />
+            <img src="/images/pic.jpg" alt="Profile Zoomed" className="zoomed-image" />
           </div>
         )}
         <div className="about-content">
@@ -83,33 +83,42 @@ function Home() {
           min-height: 100vh;
           display: flex;
           align-items: center;
+          justify-content: center;
         }
         
         .home-content {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           gap: 2rem;
           max-width: 1200px;
           margin: 0 auto;
           padding: 1rem;
           flex-direction: column;
+          width: 100%;
         }
 
         .profile-image {
           width: 100%;
           max-width: 350px;
-          aspect-ratio: 1;
           position: relative;
-          transform: none;
+          transform: perspective(1000px) rotateY(5deg);
           transition: transform 0.3s ease;
           cursor: pointer;
+          margin: 0 auto;
+          display: flex;
+          align-items: stretch;
+        }
+
+        .profile-image:hover {
+          transform: perspective(1000px) rotateY(0deg);
         }
 
         .profile-image img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
           border-radius: 20px;
           box-shadow: 10px 10px 30px rgba(0,0,0,0.1),
                       -10px -10px 30px rgba(255,255,255,0.8);
@@ -157,9 +166,13 @@ function Home() {
           border-radius: 20px;
           box-shadow: 10px 10px 30px rgba(0,0,0,0.1),
                       -10px -10px 30px rgba(255,255,255,0.8);
-          transform: none;
+          transform: perspective(1000px) rotateY(5deg);
           transition: transform 0.3s ease;
           overflow-y: auto;
+        }
+
+        .about-content:hover {
+          transform: perspective(1000px) rotateY(0deg);
         }
 
         .about-content h1 {
@@ -259,21 +272,26 @@ function Home() {
 
           .profile-image {
             flex: 0 0 400px;
-            transform: perspective(1000px) rotateY(-5deg);
+            position: relative;
+            margin: 0;
+            height: auto;
+            min-height: 100%;
           }
 
-          .profile-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
+          .profile-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
 
           .about-content {
             flex: 1;
-            transform: perspective(1000px) rotateY(5deg);
             padding: 2rem;
-          }
-
-          .about-content:hover {
-            transform: perspective(1000px) rotateY(0deg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
           }
 
           .social-profiles {
