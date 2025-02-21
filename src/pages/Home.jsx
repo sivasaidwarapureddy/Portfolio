@@ -34,7 +34,7 @@ function Home() {
     <div className="home">
       <div className="home-content">
         <div className="profile-image" onClick={toggleZoom}>
-          <img src="/src/assets/pic.jpg" alt="Profile" />
+        <img src="/images/pic.jpg" alt="Profile" />
         </div>
         {isZoomed && (
           <div className="zoom-overlay" onClick={toggleZoom}>
