@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import '../styles/Layout.css';
+import './Layout.css';
 
 function Layout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
