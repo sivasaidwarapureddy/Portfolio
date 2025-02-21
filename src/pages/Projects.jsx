@@ -12,7 +12,7 @@ function Projects() {
         "Orchestrated end-to-end software development lifecycle"
       ],
       technologies: ["HTML5", "CSS3", "React.js", "Node.js", "MongoDB", "VS Code"],
-      sourceCode: "#", // Replace with your GitHub link
+      sourceCode: "https://github.com/sivasaidwarapureddy/doctorapp", // Replace with your GitHub link
       liveDemo: "#" // Replace with your live demo link if available
     },
     {
@@ -24,7 +24,7 @@ function Projects() {
         "Added pagination and search features"
       ],
       technologies: ["React.js", "Node.js", "MongoDB", "RESTful APIs"],
-      sourceCode: "#", // Replace with your GitHub link
+      sourceCode: "https://github.com/sivasaidwarapureddy/blogapp1", // Replace with your GitHub link
       liveDemo: "#" // Replace with your live demo link if available
     },
     {
@@ -36,7 +36,7 @@ function Projects() {
         "Added multi-city search functionality"
       ],
       technologies: ["HTML", "CSS", "React.js", "Weather API", "VS Code"],
-      sourceCode: "#", // Replace with your GitHub link
+      sourceCode: "https://github.com/sivasaidwarapureddy/weatherapp1", // Replace with your GitHub link
       liveDemo: "#" // Replace with your live demo link if available
     }
   ];
